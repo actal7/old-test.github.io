@@ -1,0 +1,233 @@
+/* SPECIAL SEXY SCROLLBAR */
+
+.content-card::-webkit-scrollbar {
+    width: 2px;            
+  }
+
+.content-card::-webkit-scrollbar-track {
+    background: var(--navbar-highlight-color);      
+  }
+.content-card::-webkit-scrollbar-thumb {
+    background-color: var(--text-color);    
+    border-radius: 20px;    
+  }
+
+/* SITE WIDE COLORS */
+
+:root {
+    --navbar-color: rgb(19, 18, 6);
+    --navbar-highlight-color: rgb(223, 211, 50);
+    --transparent-color: rgba(31, 30, 17, 0.2);
+    --text-color: rgb(31, 30, 17);
+}
+
+/* GENERAL PROPERTIES */
+
+html,
+body {
+    margin: 0;
+    padding:0 ;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/*  NAVBAR */
+
+#navbar {
+    background-color: var(--navbar-color);
+    height: 3rem;
+}
+
+#navlist {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navitem {
+    list-style: none;
+    text-decoration: none;
+    background-color: var(--navbar-highlight-color);
+    color: var(--text-color);
+    height: 2em;
+    width: 5em;
+    border: 1px solid var(--text-color);
+    font-weight: 700;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navitem a {
+    display:inline-block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--text-color);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* HEADER */
+
+header {
+    min-height:13rem;
+    height: 25%;
+    width: 100%;
+    background-image: url('https://i.imgur.com/wNB2wLQ.jpg');
+    background-size: cover;
+    display: flex;
+
+    align-items: center;
+}
+
+header .blur {
+    background-color: var(--transparent-color);
+    height: 30%;
+    width: 100%;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 0.8rem;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CONTENT */
+
+.content-wrap {
+    background-color: var(--navbar-color);
+    height: 69.9%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-backdrop {
+    height: 95%;
+    width: 92%;
+    background-color: var(--navbar-highlight-color);
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 0.5fr 0.1fr 2fr 4fr 2fr 0.1fr 0.5fr;
+    grid-template-rows: 0.5fr 1.2fr 0.5fr 0.2fr 2fr 5.5fr 2fr 0.2fr 0.5fr;
+}
+
+.title-card {
+    grid-column: 3 / 6;
+    grid-row: 2 / 4;
+    padding: 10px 0 10px 0;
+    font-weight: 700;
+    font-size: 1.5em;
+    text-align: center;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-card {
+    grid-column: 3 / 6;
+    grid-row: 5 / 8;
+    padding: 3% 1% 3% 1%;
+    text-align: justify;
+    overflow: auto;
+
+}
+
+/* TRANSPARENT OVERLAY TRICK */
+
+/* .transparent-overlay {
+    grid-column: 3 / 6;
+    grid-row: 5 / 8;
+    padding: 10px 0 10px 0;
+    z-index: 1;
+    display: none;
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0) 0%,
+        var(--navbar-highlight-color) 100%
+    );
+} */
+
+/* COOL BLACK BARS GO HERE: */
+
+.top-bb {
+    grid-column: 4 / 5;
+    grid-row: 1 / 2;
+    border-bottom: 2px solid black;
+}
+
+.mid-bb {
+    grid-column: 3 / 6;
+    grid-row: 3 / 4;
+    border-bottom: 2px solid black;
+}
+
+.bot-bb {
+    grid-column: 4 / 5;
+    grid-row: 9 / 10;
+    border-top: 2px solid black;
+}
+
+.left-bb {
+    grid-column: 1 / 2;
+    grid-row: 6 / 7;
+    border-right: 2px solid black;
+}
+
+.right-bb {
+    grid-column: 7 / 8;
+    grid-row: 6 / 7;
+    border-left: 2px solid black;
+}
+
+/* FOOTER */
+
+footer {
+    height: 5%;
+    background-color: var(--navbar-highlight-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+/* LARGER SCREENS: */
+
+@media screen and (min-width: 900px) {
+html {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+}
+
+    body {
+    width: 70%;
+}
+
+}
+
+@media screen and (min-width: 1200px) {
+    html {
+        display: flex;
+        justify-content: center;
+        background-color: black;
+    }
+    
+        body {
+        width: 50%;
+    }
+    
+    }

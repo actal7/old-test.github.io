@@ -235,3 +235,16 @@ html {
     }
     
     }
+
+    @media screen and (max-device-width: 500px) and (orientation : landscape){
+        html {
+            display: flex;
+            justify-content: center;
+            background-color: black;
+        }
+        
+            body {
+            width: 50%;
+        }
+        
+      }

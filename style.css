@@ -23,6 +23,7 @@
 
 /* GENERAL PROPERTIES */
 
+
 html,
 body {
     margin: 0;
@@ -31,6 +32,9 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+html {
+    background-color: black;
+}
 
 /*  NAVBAR */
 
